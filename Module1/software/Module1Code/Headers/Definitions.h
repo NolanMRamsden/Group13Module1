@@ -14,9 +14,9 @@
 #define leds       (volatile char*)   0x00004020
 #define pushbutton (volatile char*)   0x00004000
 
-const int leftScreenBound = 0;
-const int rightScreenBound = 320;
-const int topScreenBound = 0;
-const int bottomScreenBound = 320;
+#define leftScreenBound   0
+#define rightScreenBound  320
+#define topScreenBound    0
+#define bottomScreenBound 320
 
 #endif /* DEFINITIONS_H_ */

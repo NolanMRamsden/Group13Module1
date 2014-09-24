@@ -13,7 +13,6 @@
  * "small_hello_world" template.
  *
  */
-
 #include <stdio.h>
 
 int main()
