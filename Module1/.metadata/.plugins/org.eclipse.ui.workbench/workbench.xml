@@ -13,11 +13,13 @@
 <coolItem id="org.eclipse.cdt.ui.CElementCreationActionSet" itemType="typeToolBarContribution" x="167" y="22"/>
 <coolItem id="org.eclipse.cdt.ui.buildConfigActionSet" itemType="typeToolBarContribution" x="89" y="22"/>
 <coolItem id="org.eclipse.debug.ui.launchActionSet" itemType="typeToolBarContribution" x="129" y="22"/>
-<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="76" y="22"/>
+<coolItem id="org.eclipse.search.searchActionSet" itemType="typeToolBarContribution" x="99" y="22"/>
 <coolItem id="org.eclipse.ui.edit.text.actionSet.presentation" itemType="typeToolBarContribution" x="61" y="22"/>
 <coolItem id="group.nav" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.navigate" itemType="typeToolBarContribution" x="190" y="22"/>
 <coolItem id="group.editor" itemType="typeGroupMarker"/>
+<coolItem id="org.eclipse.cdt.ui.editor.CEditor" itemType="typeToolBarContribution" x="-1" y="-1"/>
+<coolItem id="org.eclipse.ui.DefaultTextEditor" itemType="typePlaceholder" x="-1" y="-1"/>
 <coolItem id="group.help" itemType="typeGroupMarker"/>
 <coolItem id="org.eclipse.ui.workbench.help" itemType="typeToolBarContribution" x="-1" y="-1"/>
 </coolbarLayout>
@@ -26,10 +28,41 @@
 <editorArea activeWorkbook="DefaultEditorWorkbook">
 <info part="DefaultEditorWorkbook">
 <folder appearance="1" expanded="2">
-<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory"/>
+<presentation id="org.eclipse.ui.presentations.WorkbenchPresentationFactory">
+<part id="0"/>
+<part id="1"/>
+<part id="2"/>
+<part id="3"/>
+<part id="4"/>
+<part id="5"/>
+</presentation>
 </folder>
 </info>
 </editorArea>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Paddle.h" partName="Paddle.h" path="C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/Headers/Paddle.h" title="Paddle.h" tooltip="Module1Code/Headers/Paddle.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Module1Code/Headers/Paddle.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="181" selectionTopPixel="0"/>
+</editor>
+<editor activePart="true" focus="true" id="org.eclipse.cdt.ui.editor.CEditor" name="Paddle.c" partName="Paddle.c" path="C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/Source/Paddle.c" title="Paddle.c" tooltip="Module1Code/Source/Paddle.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Module1Code/Source/Paddle.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="228" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Ball.h" partName="Ball.h" path="C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/Headers/Ball.h" title="Ball.h" tooltip="Module1Code/Headers/Ball.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Module1Code/Headers/Ball.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="191" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Ball.c" partName="Ball.c" path="C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/Source/Ball.c" title="Ball.c" tooltip="Module1Code/Source/Ball.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Module1Code/Source/Ball.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="112" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="Definitions.h" partName="Definitions.h" path="C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/Headers/Definitions.h" title="Definitions.h" tooltip="Module1Code/Headers/Definitions.h" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Module1Code/Headers/Definitions.h"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="128" selectionTopPixel="0"/>
+</editor>
+<editor id="org.eclipse.cdt.ui.editor.CEditor" name="entryPoint.c" partName="entryPoint.c" path="C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/entryPoint.c" title="entryPoint.c" tooltip="Module1Code/entryPoint.c" workbook="DefaultEditorWorkbook">
+<input factoryID="org.eclipse.ui.part.FileEditorInputFactory" path="/Module1Code/entryPoint.c"/>
+<editorState selectionHorizontalPixel="0" selectionLength="0" selectionOffset="621" selectionTopPixel="0"/>
+</editor>
 </editors>
 <views>
 <view id="org.eclipse.ui.navigator.ProjectExplorer" partName="Project Explorer">
@@ -39,6 +72,11 @@
 <view id="org.eclipse.cdt.make.ui.views.MakeView" partName="Make Target"/>
 <view id="org.eclipse.ui.views.ProblemView" partName="Problems">
 <viewState PRIMARY_SORT_FIELD="org.eclipse.ui.ide.severityAndDescriptionField" categoryGroup="org.eclipse.ui.ide.severity" markerContentGenerator="org.eclipse.ui.ide.problemsGenerator" partName="Problems">
+<expanded>
+<category IMemento.internal.id="Errors (7 items)"/>
+<category IMemento.internal.id="Warnings"/>
+<category IMemento.internal.id="Errors"/>
+</expanded>
 <columnWidths org.eclipse.ui.ide.locationField="90" org.eclipse.ui.ide.markerType="90" org.eclipse.ui.ide.pathField="120" org.eclipse.ui.ide.resourceField="90" org.eclipse.ui.ide.severityAndDescriptionField="300"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.severityAndDescriptionField"/>
 <visible IMemento.internal.id="org.eclipse.ui.ide.resourceField"/>
@@ -67,7 +105,7 @@
 <viewState/>
 </view>
 </views>
-<perspectives activePart="org.eclipse.ui.navigator.ProjectExplorer" activePerspective="com.altera.sbtgui.ui.cPerspective">
+<perspectives activePart="org.eclipse.cdt.ui.editor.CEditor" activePerspective="com.altera.sbtgui.ui.cPerspective">
 <perspective editorAreaTrimState="2" editorAreaVisible="1" fixed="0" version="0.016">
 <descriptor class="org.eclipse.cdt.internal.ui.CPerspectiveFactory" id="org.eclipse.cdt.ui.CPerspective" label="C/C++"/>
 <alwaysOnActionSet id="org.eclipse.mylyn.context.ui.actionSet"/>
@@ -270,7 +308,168 @@
 </perspective>
 </perspectives>
 <workingSets/>
-<navigationHistory/>
+<navigationHistory>
+<editors>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Module1Code/Headers/Definitions.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Module1Code/Headers/Paddle.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Module1Code/Source/Paddle.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Module1Code/Headers/Ball.h"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Module1Code/Source/Ball.c"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" path="/Module1Code/obj/default/Source/Paddle.o"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" path="/Module1Code/obj/default/Source/Ball.o"/>
+<editor factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" path="/Module1Code/entryPoint.c"/>
+</editors>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="179" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="246" y="35"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="225" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="246" y="35"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="246" y="35"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="Ball.h" index="3">
+<position info="not_deleted" x="191" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="681" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="119" y="0"/>
+</item>
+<item historyLabel="Definitions.h" index="0">
+<position info="not_deleted" x="385" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="119" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="119" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="298" y="0"/>
+</item>
+<item historyLabel="Paddle.o" index="5">
+<position/>
+</item>
+<item historyLabel="Ball.o" index="6">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Paddle.o" index="5">
+<position/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="70" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="119" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="180" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="70" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="681" y="0"/>
+</item>
+<item historyLabel="Definitions.h" index="0">
+<position info="not_deleted" x="464" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="576" y="0"/>
+</item>
+<item historyLabel="Ball.h" index="3">
+<position info="not_deleted" x="191" y="0"/>
+</item>
+<item historyLabel="Definitions.h" index="0">
+<position info="not_deleted" x="412" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="435" y="0"/>
+</item>
+<item historyLabel="Definitions.h" index="0">
+<position info="not_deleted" x="412" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="2" y="0"/>
+</item>
+<item historyLabel="Definitions.h" index="0">
+<position info="not_deleted" x="412" y="0"/>
+</item>
+<item historyLabel="entryPoint.c" index="7">
+<position info="not_deleted" x="621" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="119" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="entryPoint.c" index="7">
+<position info="not_deleted" x="643" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="488" y="0"/>
+</item>
+<item historyLabel="entryPoint.c" index="7">
+<position info="not_deleted" x="621" y="0"/>
+</item>
+<item historyLabel="Ball.c" index="4">
+<position info="not_deleted" x="112" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="79" y="0"/>
+</item>
+<item historyLabel="Paddle.o" index="5">
+<position/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="Paddle.o" index="5">
+<position info="not_deleted" x="0" y="0"/>
+</item>
+<item historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+<item historyLabel="Paddle.h" index="1">
+<position info="not_deleted" x="181" y="0"/>
+</item>
+<item historyLabel="entryPoint.c" index="7">
+<position info="not_deleted" x="621" y="0"/>
+</item>
+<item historyLabel="Definitions.h" index="0">
+<position info="not_deleted" x="128" y="0"/>
+</item>
+<item active="true" historyLabel="Paddle.c" index="2">
+<position info="not_deleted" x="228" y="0"/>
+</item>
+</navigationHistory>
 <input factoryID="org.eclipse.ui.internal.model.ResourceFactory" path="/" type="8"/>
 </page>
 <workbenchWindowAdvisor/>
@@ -287,5 +486,27 @@
 </trimArea>
 </trimLayout>
 </window>
-<mruList/>
+<mruList>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="entryPoint.c" tooltip="Module1Code/entryPoint.c">
+<persistable path="/Module1Code/entryPoint.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.binaryEditor" name="Ball.o" tooltip="Module1Code/obj/default/Source/Ball.o">
+<persistable path="/Module1Code/obj/default/Source/Ball.o"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Definitions.h" tooltip="Module1Code/Headers/Definitions.h">
+<persistable path="/Module1Code/Headers/Definitions.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Ball.c" tooltip="Module1Code/Source/Ball.c">
+<persistable path="/Module1Code/Source/Ball.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Ball.h" tooltip="Module1Code/Headers/Ball.h">
+<persistable path="/Module1Code/Headers/Ball.h"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Paddle.c" tooltip="Module1Code/Source/Paddle.c">
+<persistable path="/Module1Code/Source/Paddle.c"/>
+</file>
+<file factoryID="org.eclipse.ui.part.FileEditorInputFactory" id="org.eclipse.cdt.ui.editor.CEditor" name="Paddle.h" tooltip="Module1Code/Headers/Paddle.h">
+<persistable path="/Module1Code/Headers/Paddle.h"/>
+</file>
+</mruList>
 </workbench>

@@ -1,0 +1,27 @@
+/*
+ * Paddle.h
+ *
+ *  Created on: Sep 23, 2014
+ *      Author: Nolan
+ */
+
+#ifndef PADDLE_H_
+#define PADDLE_H_
+
+const int leftBound = 0;
+const int rightBound = 320;
+const int moveScale = 1;
+const int paddleHeight=10;
+
+typedef struct
+{
+	float x;
+	float y;
+	float xVelo;
+	float yVelo;
+}Paddle;
+
+void moveHorizontal(Paddle *paddle, int x);
+
+
+#endif /* PADDLE_H_ */

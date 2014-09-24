@@ -5,6 +5,13 @@ make all
 Info: Building ../Module1Code_bsp/
 make --no-print-directory -C ../Module1Code_bsp/
 [BSP build complete]
-[Module1Code build complete]
+Info: Compiling Source/Paddle.c to obj/default/Source/Paddle.o
+nios2-elf-gcc -xc -MP -MMD -c -I../Module1Code_bsp//HAL/inc -I../Module1Code_bsp/ -I../Module1Code_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/Source/Paddle.o Source/Paddle.c
+Source/Paddle.c: In function 'moveHorizontal':
+Source/Paddle.c:21: error: 'leftScreenBound' undeclared (first use in this function)
+Source/Paddle.c:21: error: (Each undeclared identifier is reported only once
+Source/Paddle.c:21: error: for each function it appears in.)
+Source/Paddle.c:23: error: 'rightScreenBound' undeclared (first use in this function)
+make: *** [obj/default/Source/Paddle.o] Error 1
 
 **** Build Finished ****
