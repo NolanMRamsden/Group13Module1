@@ -13,10 +13,12 @@
 #define switches   (volatile char*)   0x00004030
 #define leds       (volatile char*)   0x00004020
 #define pushbutton (volatile char*)   0x00004000
+#define NULL       ((void*)0)
 
 #define leftScreenBound   0
 #define rightScreenBound  320
 #define topScreenBound    0
 #define bottomScreenBound 320
+#define screenRefreshRate 20
 
 #endif /* DEFINITIONS_H_ */

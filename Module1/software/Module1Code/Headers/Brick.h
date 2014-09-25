@@ -2,7 +2,7 @@
  * Brick.h
  *
  *  Created on: Sep 24, 2014
- *      Author: Karen
+ *      Author: Nolan
  */
 
 #ifndef BRICK_H_

@@ -2,8 +2,8 @@
 <sch:Settings xmlns:sch="http://www.altera.com/embeddedsw/bsp/schema">
         <BspType>hal</BspType>
         <BspVersion>default</BspVersion>
-        <BspGeneratedTimeStamp>Sep 23, 2014 9:14:20 PM</BspGeneratedTimeStamp>
-        <BspGeneratedUnixTimeStamp>1411532060511</BspGeneratedUnixTimeStamp>
+        <BspGeneratedTimeStamp>Sep 24, 2014 9:03:58 PM</BspGeneratedTimeStamp>
+        <BspGeneratedUnixTimeStamp>1411617838637</BspGeneratedUnixTimeStamp>
         <BspGeneratedLocation>C:\Users\Karen\Documents\GitHub\Group13Module1\Module1\software\Module1Code_bsp</BspGeneratedLocation>
         <BspSettingsFile>settings.bsp</BspSettingsFile>
         <SopcDesignFile>C:\Users\Karen\Documents\GitHub\Group13Module1\Module1\nios_system.sopcinfo</SopcDesignFile>
@@ -14,7 +14,7 @@
                 <SettingName>hal.sys_clk_timer</SettingName>
                 <Identifier>ALT_SYS_CLK</Identifier>
                 <Type>UnquotedString</Type>
-                <Value>none</Value>
+                <Value>timer_0</Value>
                 <DefaultValue>none</DefaultValue>
                 <DestinationFile>system_h_define</DestinationFile>
                 <Description>Slave descriptor of the system clock timer device. This device provides a periodic interrupt ("tick") and is typically required for RTOS use. This setting defines the value of ALT_SYS_CLK in system.h.</Description>
@@ -899,14 +899,20 @@
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
+                <slaveDescriptor>timer_0</slaveDescriptor>
+                <addressRange>0x00004040 - 0x0000405F</addressRange>
+                <addressSpan>32</addressSpan>
+                <attributes>timer</attributes>
+        </MemoryMap>
+        <MemoryMap>
                 <slaveDescriptor>video_character_buffer_with_dma_0_avalon_char_control_slave</slaveDescriptor>
-                <addressRange>0x00004040 - 0x00004047</addressRange>
+                <addressRange>0x00004060 - 0x00004067</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes/>
         </MemoryMap>
         <MemoryMap>
                 <slaveDescriptor>jtag_uart_0</slaveDescriptor>
-                <addressRange>0x00004048 - 0x0000404F</addressRange>
+                <addressRange>0x00004068 - 0x0000406F</addressRange>
                 <addressSpan>8</addressSpan>
                 <attributes>printable</attributes>
         </MemoryMap>

@@ -1,5 +1,5 @@
 EDA Netlist Writer report for Module1
-Tue Sep 23 21:28:13 2014
+Wed Sep 24 21:01:46 2014
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -34,7 +34,7 @@ applicable agreement for further details.
 +---------------------------------------------------------------+
 ; EDA Netlist Writer Summary                                    ;
 +---------------------------+-----------------------------------+
-; EDA Netlist Writer Status ; Failed - Tue Sep 23 21:28:13 2014 ;
+; EDA Netlist Writer Status ; Failed - Wed Sep 24 21:01:46 2014 ;
 ; Revision Name             ; Module1                           ;
 ; Top-level Entity Name     ; Module1                           ;
 ; Family                    ; Cyclone II                        ;
@@ -47,7 +47,7 @@ applicable agreement for further details.
 Info: *******************************************************************
 Info: Running Quartus II 32-bit EDA Netlist Writer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Sep 23 21:28:10 2014
+    Info: Processing started: Wed Sep 24 21:01:43 2014
 Info: Command: quartus_eda --read_settings_files=off --write_settings_files=off Module1 -c Module1
 Error (204012): Can't generate netlist output files because the file "C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v" is an OpenCore Plus time-limited file
 Error (204009): Can't generate netlist output files because the license for encrypted file "C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v" is not available
@@ -56,9 +56,9 @@ Error (204009): Can't generate netlist output files because the license for encr
 Error (204012): Can't generate netlist output files because the file "C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v" is an OpenCore Plus time-limited file
 Error (204009): Can't generate netlist output files because the license for encrypted file "C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/nios_system/synthesis/submodules/nios_system_nios2_qsys_0.v" is not available
 Error: Quartus II 32-bit EDA Netlist Writer was unsuccessful. 6 errors, 0 warnings
-    Error: Peak virtual memory: 361 megabytes
-    Error: Processing ended: Tue Sep 23 21:28:14 2014
-    Error: Elapsed time: 00:00:04
-    Error: Total CPU time (on all processors): 00:00:04
+    Error: Peak virtual memory: 362 megabytes
+    Error: Processing ended: Wed Sep 24 21:01:46 2014
+    Error: Elapsed time: 00:00:03
+    Error: Total CPU time (on all processors): 00:00:03
 
 

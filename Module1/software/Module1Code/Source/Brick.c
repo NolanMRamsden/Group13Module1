@@ -2,7 +2,7 @@
  * Brick.c
  *
  *  Created on: Sep 24, 2014
- *      Author: Karen
+ *      Author: Nolan
  */
 
 

@@ -1,5 +1,5 @@
 TimeQuest Timing Analyzer report for Module1
-Tue Sep 23 21:28:08 2014
+Wed Sep 24 21:01:42 2014
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -87,8 +87,8 @@ Parallel compilation was disabled, but you have multiple processors available. E
 +---------------------------------------------------------------+--------+--------------------------+
 ; SDC File Path                                                 ; Status ; Read at                  ;
 +---------------------------------------------------------------+--------+--------------------------+
-; nios_system/synthesis/submodules/altera_reset_controller.sdc  ; OK     ; Tue Sep 23 21:28:05 2014 ;
-; nios_system/synthesis/submodules/nios_system_nios2_qsys_0.sdc ; OK     ; Tue Sep 23 21:28:05 2014 ;
+; nios_system/synthesis/submodules/altera_reset_controller.sdc  ; OK     ; Wed Sep 24 21:01:38 2014 ;
+; nios_system/synthesis/submodules/nios_system_nios2_qsys_0.sdc ; OK     ; Wed Sep 24 21:01:38 2014 ;
 +---------------------------------------------------------------+--------+--------------------------+
 
 
@@ -301,7 +301,7 @@ No dedicated SERDES Receiver circuitry present in device or used in design
 Info: *******************************************************************
 Info: Running Quartus II 32-bit TimeQuest Timing Analyzer
     Info: Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
-    Info: Processing started: Tue Sep 23 21:27:58 2014
+    Info: Processing started: Wed Sep 24 21:01:33 2014
 Info: Command: quartus_sta Module1 -c Module1
 Info: qsta_default_script.tcl version: #1
 Warning (20028): Parallel compilation is not licensed and has been disabled
@@ -347,6 +347,7 @@ Info (332164): Evaluating HDL-embedded SDC commands
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_stalled}] -to [get_registers {*|alt_jtag_atlantic:*|t_pause*}]
         Info (332166): set_false_path -from [get_registers {*|alt_jtag_atlantic:*|write_valid}]
     Info (332165): Entity altera_avalon_st_clock_crosser
+        Info (332166): set_false_path -from [get_registers *altera_avalon_st_clock_crosser:*|in_data_buffer*] -to [get_registers *altera_avalon_st_clock_crosser:*|out_data_buffer*]
         Info (332166): set_false_path -from [get_registers *altera_avalon_st_clock_crosser:*|in_data_buffer*] -to [get_registers *altera_avalon_st_clock_crosser:*|out_data_buffer*]
         Info (332166): set_false_path -from [get_registers *altera_avalon_st_clock_crosser:*|in_data_buffer*] -to [get_registers *altera_avalon_st_clock_crosser:*|out_data_buffer*]
         Info (332166): set_false_path -from [get_registers *altera_avalon_st_clock_crosser:*|in_data_buffer*] -to [get_registers *altera_avalon_st_clock_crosser:*|out_data_buffer*]
@@ -514,9 +515,9 @@ Info (332001): The selected device family is not supported by the report_metasta
 Info (332102): Design is not fully constrained for setup requirements
 Info (332102): Design is not fully constrained for hold requirements
 Info: Quartus II 32-bit TimeQuest Timing Analyzer was successful. 0 errors, 11 warnings
-    Info: Peak virtual memory: 400 megabytes
-    Info: Processing ended: Tue Sep 23 21:28:08 2014
-    Info: Elapsed time: 00:00:10
+    Info: Peak virtual memory: 396 megabytes
+    Info: Processing ended: Wed Sep 24 21:01:42 2014
+    Info: Elapsed time: 00:00:09
     Info: Total CPU time (on all processors): 00:00:08
 
 

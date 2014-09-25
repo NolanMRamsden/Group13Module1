@@ -1,1 +1,3 @@
-obj/default/entryPoint.o: entryPoint.c
+obj/default/entryPoint.o: entryPoint.c Headers/Definitions.h
+
+Headers/Definitions.h:

@@ -147,6 +147,7 @@ C_SRCS += Source/Paddle.c
 C_SRCS += Source/Ball.c
 C_SRCS += Source/Brick.c
 C_SRCS += Source/Input.c
+C_SRCS += Source/Interrupt.c
 CXX_SRCS :=
 ASM_SRCS :=
 

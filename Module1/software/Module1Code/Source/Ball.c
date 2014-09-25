@@ -22,15 +22,26 @@ void updatePosition(Ball *ball)
 	ball->x += ball->xVelo;
 	ball->y += ball->yVelo;
 
-	if (ball->x < leftScreenBound)
+	if (ball->x <= leftScreenBound)
+	{
 		ball->x = leftScreenBound;
-	else if (ball->x > rightScreenBound)
+		bounceWall(ball);
+	}
+	else if (ball->x >= rightScreenBound)
+	{
 		ball->x = rightScreenBound;
-
-	if (ball->y < bottomScreenBound)
+		bounceWall(ball);
+	}
+	if (ball->y <= bottomScreenBound)
+	{
 		ball->y = bottomScreenBound;
-	else if (ball->y > topScreenBound)
+		bounceWall(ball);
+	}
+	else if (ball->y >= topScreenBound)
+	{
 		ball->y = topScreenBound;
+		bounceWall(ball);
+	}
 }
 
 void bounceWall(Ball *ball)

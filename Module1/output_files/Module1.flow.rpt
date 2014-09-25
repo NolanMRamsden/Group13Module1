@@ -1,5 +1,5 @@
 Flow report for Module1
-Tue Sep 23 21:28:13 2014
+Wed Sep 24 21:01:46 2014
 Quartus II 32-bit Version 13.0.1 Build 232 06/12/2013 Service Pack 1 SJ Web Edition
 
 
@@ -40,17 +40,17 @@ applicable agreement for further details.
 +-------------------------------------------------------------------------------------------+
 ; Flow Summary                                                                              ;
 +------------------------------------+------------------------------------------------------+
-; Flow Status                        ; EDA Netlist Writer Failed - Tue Sep 23 21:28:13 2014 ;
+; Flow Status                        ; EDA Netlist Writer Failed - Wed Sep 24 21:01:46 2014 ;
 ; Quartus II 32-bit Version          ; 13.0.1 Build 232 06/12/2013 SP 1 SJ Web Edition      ;
 ; Revision Name                      ; Module1                                              ;
 ; Top-level Entity Name              ; Module1                                              ;
 ; Family                             ; Cyclone II                                           ;
 ; Device                             ; EP2C35F672C6                                         ;
 ; Timing Models                      ; Final                                                ;
-; Total logic elements               ; 6,816 / 33,216 ( 21 % )                              ;
-;     Total combinational functions  ; 5,507 / 33,216 ( 17 % )                              ;
-;     Dedicated logic registers      ; 5,044 / 33,216 ( 15 % )                              ;
-; Total registers                    ; 5112                                                 ;
+; Total logic elements               ; 7,163 / 33,216 ( 22 % )                              ;
+;     Total combinational functions  ; 5,744 / 33,216 ( 17 % )                              ;
+;     Dedicated logic registers      ; 5,324 / 33,216 ( 16 % )                              ;
+; Total registers                    ; 5392                                                 ;
 ; Total pins                         ; 135 / 475 ( 28 % )                                   ;
 ; Total virtual pins                 ; 0                                                    ;
 ; Total memory bits                  ; 185,856 / 483,840 ( 38 % )                           ;
@@ -64,7 +64,7 @@ applicable agreement for further details.
 +-------------------+---------------------+
 ; Option            ; Setting             ;
 +-------------------+---------------------+
-; Start date & time ; 09/23/2014 21:23:35 ;
+; Start date & time ; 09/24/2014 20:57:51 ;
 ; Main task         ; Compilation         ;
 ; Revision Name     ; Module1             ;
 +-------------------+---------------------+
@@ -75,7 +75,7 @@ applicable agreement for further details.
 +-------------------------------------+---------------------------------------------------------------+---------------+------------------------------------------+----------------+
 ; Assignment Name                     ; Value                                                         ; Default Value ; Entity Name                              ; Section Id     ;
 +-------------------------------------+---------------------------------------------------------------+---------------+------------------------------------------+----------------+
-; COMPILER_SIGNATURE_ID               ; 6699158216444.141153261204540                                 ; --            ; --                                       ; --             ;
+; COMPILER_SIGNATURE_ID               ; 6699158216444.141161746506908                                 ; --            ; --                                       ; --             ;
 ; EDA_OUTPUT_DATA_FORMAT              ; Vhdl                                                          ; --            ; --                                       ; eda_simulation ;
 ; EDA_SIMULATION_TOOL                 ; ModelSim-Altera (VHDL)                                        ; <None>        ; --                                       ; --             ;
 ; IP_TOOL_ENV                         ; Qsys                                                          ; --            ; altera_avalon_sc_fifo                    ; --             ;
@@ -117,6 +117,7 @@ applicable agreement for further details.
 ; IP_TOOL_ENV                         ; Qsys                                                          ; --            ; nios_system_rsp_xbar_mux_001             ; --             ;
 ; IP_TOOL_ENV                         ; Qsys                                                          ; --            ; nios_system_sdram                        ; --             ;
 ; IP_TOOL_ENV                         ; Qsys                                                          ; --            ; nios_system_switches                     ; --             ;
+; IP_TOOL_ENV                         ; Qsys                                                          ; --            ; nios_system_timer_0                      ; --             ;
 ; IP_TOOL_NAME                        ; altera_avalon_sc_fifo                                         ; --            ; altera_avalon_sc_fifo                    ; --             ;
 ; IP_TOOL_NAME                        ; altera_avalon_st_handshake_clock_crosser                      ; --            ; altera_avalon_st_handshake_clock_crosser ; --             ;
 ; IP_TOOL_NAME                        ; altera_irq_clock_crosser                                      ; --            ; altera_irq_clock_crosser                 ; --             ;
@@ -156,6 +157,7 @@ applicable agreement for further details.
 ; IP_TOOL_NAME                        ; altera_merlin_multiplexer                                     ; --            ; nios_system_rsp_xbar_mux_001             ; --             ;
 ; IP_TOOL_NAME                        ; altera_avalon_new_sdram_controller                            ; --            ; nios_system_sdram                        ; --             ;
 ; IP_TOOL_NAME                        ; altera_avalon_pio                                             ; --            ; nios_system_switches                     ; --             ;
+; IP_TOOL_NAME                        ; altera_avalon_timer                                           ; --            ; nios_system_timer_0                      ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                                          ; --            ; altera_avalon_sc_fifo                    ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                                          ; --            ; altera_avalon_st_handshake_clock_crosser ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0                                                          ; --            ; altera_irq_clock_crosser                 ; --             ;
@@ -195,6 +197,7 @@ applicable agreement for further details.
 ; IP_TOOL_VERSION                     ; 13.0                                                          ; --            ; nios_system_rsp_xbar_mux_001             ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0.1.99.2                                                   ; --            ; nios_system_sdram                        ; --             ;
 ; IP_TOOL_VERSION                     ; 13.0.1.99.2                                                   ; --            ; nios_system_switches                     ; --             ;
+; IP_TOOL_VERSION                     ; 13.0.1.99.2                                                   ; --            ; nios_system_timer_0                      ; --             ;
 ; MAX_CORE_JUNCTION_TEMP              ; 85                                                            ; --            ; --                                       ; --             ;
 ; MIN_CORE_JUNCTION_TEMP              ; 0                                                             ; --            ; --                                       ; --             ;
 ; MISC_FILE                           ; nios_system/synthesis/../../nios_system.cmp                   ; --            ; --                                       ; --             ;
@@ -205,7 +208,7 @@ applicable agreement for further details.
 ; POWER_BOARD_THERMAL_MODEL           ; None (CONSERVATIVE)                                           ; --            ; --                                       ; --             ;
 ; POWER_PRESET_COOLING_SOLUTION       ; 23 MM HEAT SINK WITH 200 LFPM AIRFLOW                         ; --            ; --                                       ; --             ;
 ; PROJECT_OUTPUT_DIRECTORY            ; output_files                                                  ; --            ; --                                       ; --             ;
-; SLD_INFO                            ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1411528555 ; --            ; nios_system                              ; --             ;
+; SLD_INFO                            ; QSYS_NAME nios_system HAS_SOPCINFO 1 GENERATION_ID 1411617393 ; --            ; nios_system                              ; --             ;
 ; SOPCINFO_FILE                       ; nios_system/synthesis/../../nios_system.sopcinfo              ; --            ; --                                       ; --             ;
 ; SYNTHESIS_ONLY_QIP                  ; On                                                            ; --            ; --                                       ; --             ;
 +-------------------------------------+---------------------------------------------------------------+---------------+------------------------------------------+----------------+
@@ -216,12 +219,12 @@ applicable agreement for further details.
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 ; Module Name               ; Elapsed Time ; Average Processors Used ; Peak Virtual Memory ; Total CPU Time (on all processors) ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
-; Analysis & Synthesis      ; 00:01:56     ; 1.0                     ; 526 MB              ; 00:01:34                           ;
-; Fitter                    ; 00:01:56     ; 1.0                     ; 586 MB              ; 00:01:44                           ;
-; Assembler                 ; 00:00:11     ; 1.0                     ; 371 MB              ; 00:00:09                           ;
-; TimeQuest Timing Analyzer ; 00:00:09     ; 1.0                     ; 400 MB              ; 00:00:07                           ;
-; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 344 MB              ; 00:00:04                           ;
-; Total                     ; 00:04:15     ; --                      ; --                  ; 00:03:38                           ;
+; Analysis & Synthesis      ; 00:01:45     ; 1.0                     ; 528 MB              ; 00:01:43                           ;
+; Fitter                    ; 00:01:36     ; 1.0                     ; 573 MB              ; 00:01:35                           ;
+; Assembler                 ; 00:00:07     ; 1.0                     ; 380 MB              ; 00:00:06                           ;
+; TimeQuest Timing Analyzer ; 00:00:08     ; 1.0                     ; 396 MB              ; 00:00:07                           ;
+; EDA Netlist Writer        ; 00:00:03     ; 1.0                     ; 351 MB              ; 00:00:02                           ;
+; Total                     ; 00:03:39     ; --                      ; --                  ; 00:03:33                           ;
 +---------------------------+--------------+-------------------------+---------------------+------------------------------------+
 
 

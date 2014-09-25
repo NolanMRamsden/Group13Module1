@@ -2,9 +2,11 @@
  * Input.c
  *
  *  Created on: Sep 24, 2014
- *      Author: Karen
+ *      Author: Nolan
  */
 #include "../Headers/Definitions.h"
+#include "io.h"
+
 const int scalars[4] = {-5,-2,2,5};
 //returns a number from -10 to 10 for the scalar value of horizontal movement
 int getUserInput()
@@ -12,7 +14,7 @@ int getUserInput()
 	int i=0;
 	for(i=0;i<4;i++)
 	{
-		if( (*pushbutton & (1 << i)) == 0)
+		if( ((IORD_8DIRECT(pushbutton,0) >> i) & 1) == 0)
 			return scalars[i];
 	}
 	return 0;
@@ -23,7 +25,7 @@ int getSwitchIndex()
 	int i=0;
 	for(i=0;i<8;i++)
 	{
-		if( (*switches & (1 << i)) == 1)
+		if( ((IORD_8DIRECT(switches,0) >> i) & 1) == 1)
 			return i;
 	}
 	return -1;
@@ -31,14 +33,14 @@ int getSwitchIndex()
 
 void turnOnLED(int index)
 {
-	if (index > 8)
+	if (index > 8 || index < 0)
 		return;
-	*leds = *leds | (1<<index);
+	IOWR_8DIRECT(leds,0,IORD_8DIRECT(leds,0) | (1 << index));
 }
 
 void turnOffLED(int index)
 {
-	if (index > 8)
+	if (index > 8 || index < 0)
 		return;
-	*leds = *leds & (256 & ~(1<<index));
+	IOWR_8DIRECT(leds,0,IORD_8DIRECT(leds,0) & (256 & ~(1<<index)));
 }
