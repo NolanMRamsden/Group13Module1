@@ -1,0 +1,9 @@
+
+#include "Headers/Definitions.h"
+
+int main()
+{
+	initVGA();
+	return 0;
+}
+

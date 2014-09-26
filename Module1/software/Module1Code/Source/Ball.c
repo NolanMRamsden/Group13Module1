@@ -4,17 +4,16 @@
  *  Created on: Sep 23, 2014
  *      Author: Nolan
  */
+#include "../Headers/Definitions.h"
 #include "../Headers/Ball.h"
 
-Ball *startBall(float x, float y, float xVelo, float yVelo)
+void startBall(Ball *ball, int x, int y, int xVelo, int yVelo)
 {
-	Ball *ball;
-	ball->x = x;
-	ball->y = y;
+	ball->x = x*100;
+	ball->y = y*100;
 	ball->xVelo = xVelo;
 	ball->yVelo = yVelo;
 	ball->alive = 1;
-	return ball;
 }
 
 void updatePosition(Ball *ball)
@@ -22,25 +21,27 @@ void updatePosition(Ball *ball)
 	ball->x += ball->xVelo;
 	ball->y += ball->yVelo;
 
-	if (ball->x <= leftScreenBound)
+	int x = ball->x/100;
+	int y = ball->y/100;
+	if (x <= leftScreenBound)
 	{
-		ball->x = leftScreenBound;
+		ball->x = leftScreenBound*100;
 		bounceWall(ball);
 	}
-	else if (ball->x >= rightScreenBound)
+	else if (x >= rightScreenBound)
 	{
-		ball->x = rightScreenBound;
+		ball->x = rightScreenBound*100;
 		bounceWall(ball);
 	}
-	if (ball->y <= bottomScreenBound)
+	if (y >= bottomScreenBound)
 	{
-		ball->y = bottomScreenBound;
-		bounceWall(ball);
+		ball->y = bottomScreenBound*100;
+		bounceRoof(ball);
 	}
-	else if (ball->y >= topScreenBound)
+	else if (y <= topScreenBound)
 	{
-		ball->y = topScreenBound;
-		bounceWall(ball);
+		ball->y = topScreenBound*100;
+		bounceRoof(ball);
 	}
 }
 
@@ -53,3 +54,5 @@ void bounceRoof(Ball *ball)
 {
 	ball->yVelo = -ball->yVelo;
 }
+
+

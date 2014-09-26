@@ -1,0 +1,71 @@
+/*
+ * Drawing.c
+ *
+ *  Created on: Sep 25, 2014
+ *      Author: William
+ */
+
+#include "../Headers/Drawing.h"
+
+static alt_up_pixel_buffer_dma_dev* pixel_buffer;
+static alt_up_char_buffer_dev *char_buffer;
+static prevX;
+static prevY;
+void initVGA()
+{
+	// Use the name of your pixel buffer DMA core
+	pixel_buffer = alt_up_pixel_buffer_dma_open_dev("/dev/video_pixel_buffer_dma_0");
+
+	// Set the background buffer address – Although we don’t use the
+	//background, // they only provide a function to change the background
+	// buffer address, so
+	// we must set that, and then swap it to the foreground.
+	alt_up_pixel_buffer_dma_change_back_buffer_address(pixel_buffer, PIXEL_BUFFER_BASE);
+	// Swap background and foreground buffers
+	alt_up_pixel_buffer_dma_swap_buffers(pixel_buffer);
+	// Wait for the swap to completewhile
+	(alt_up_pixel_buffer_dma_check_swap_buffers_status(pixel_buffer));
+	// Clear the screen
+	alt_up_pixel_buffer_dma_clear_screen(pixel_buffer, 0);
+
+	// Initialize character buffer
+	char_buffer = alt_up_char_buffer_open_dev("/dev/video_character_buffer_with_dma_0");
+	alt_up_char_buffer_init(char_buffer);
+}
+
+void drawBall(int x,int y, int colour)
+{
+	if(colour != background)
+			drawBall(prevX,prevY,background);
+
+	//alt_up_char_buffer_string (char_buffer,"0",ball->x,ball->y);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+8, y,x+15, y, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+6, y+1,x+17, y+1, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+5, y+2,x+18, y+2, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+4, y+3,x+19, y+3, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+3, y+4,x+20, y+4, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+2, y+5,x+21, y+5, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+1, y+6,x+22, y+6, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+1, y+7,x+22, y+7, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+8,x+23, y+8, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+9,x+23, y+9, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+10,x+23, y+10, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+11,x+23, y+11, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+12,x+23, y+12, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+13,x+23, y+13, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+14,x+23, y+14, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x, y+15,x+23, y+15, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+1, y+16,x+22, y+16, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+1, y+17,x+22, y+17, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+2, y+18,x+21, y+18, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+3, y+19,x+20, y+19, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+4, y+20,x+19, y+20, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+5, y+21,x+18, y+21, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+6, y+22,x+17, y+22, colour, 0);
+	alt_up_pixel_buffer_dma_draw_line(pixel_buffer, x+8, y+23,x+15, y+23, colour, 0);
+
+	prevX=x;
+	prevY=y;
+
+
+}

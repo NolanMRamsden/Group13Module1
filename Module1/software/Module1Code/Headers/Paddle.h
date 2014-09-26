@@ -5,6 +5,7 @@
  *      Author: Nolan
  */
 #include "../Headers/Definitions.h"
+
 #ifndef PADDLE_H_
 #define PADDLE_H_
 

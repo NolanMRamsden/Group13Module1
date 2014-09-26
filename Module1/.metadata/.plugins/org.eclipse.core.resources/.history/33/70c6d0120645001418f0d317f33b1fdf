@@ -1,0 +1,15 @@
+/*
+ * Drawing.h
+ *
+ *  Created on: Sep 25, 2014
+ *      Author: Karen
+ */
+#include "Ball.h"
+
+#ifndef DRAWING_H_
+#define DRAWING_H_
+
+extern void initVGA();
+extern void drawBall(Ball *ball);
+
+#endif /* DRAWING_H_ */

@@ -58,8 +58,15 @@ ENTITY Module1 IS
 		
 		SRAM_OE_N	:	OUT	STD_LOGIC;
 		
-		SRAM_WE_N	:	OUT	STD_LOGIC);
+		SRAM_WE_N	:	OUT	STD_LOGIC;
 		
+		sd_cmd : inout std_logic;
+		
+		sd_dat : inout std_logic;
+		
+		sd_dat3 : inout std_logic;
+		
+		sd_clk : out std_logic);
 
    END Module1;
 
@@ -127,8 +134,16 @@ ARCHITECTURE Structure OF Module1 IS
 		
 		pixel_buffers_OE_N	:	OUT	STD_LOGIC;
 		
-		pixel_buffers_WE_N	:	OUT	STD_LOGIC);
+		pixel_buffers_WE_N	:	OUT	STD_LOGIC;
 		
+		sd_data_b_SD_cmd : inout std_logic;
+		
+		sd_data_b_SD_dat : inout std_logic;
+		
+		sd_data_b_SD_dat3 : inout std_logic;
+		
+		sd_data_o_SD_clock : out std_logic);
+	
  
    END COMPONENT;
 
@@ -208,6 +223,14 @@ ARCHITECTURE Structure OF Module1 IS
 			
 		pixel_buffers_OE_N	=>	SRAM_OE_N,
 			
-		pixel_buffers_WE_N	=>	SRAM_WE_N);
+		pixel_buffers_WE_N	=>	SRAM_WE_N,
+		
+		sd_data_b_SD_cmd => sd_cmd,
+		
+		sd_data_b_SD_dat => sd_dat,
+		
+		sd_data_b_SD_dat3 => sd_dat3,
+		
+		sd_data_o_SD_clock => sd_clk);
 
    END Structure;

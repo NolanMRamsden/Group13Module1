@@ -3,10 +3,10 @@
 
 int main()
 {
-	while (1)
-	{
-		turnOnLED(getSwitchIndex());
-	}
+	initVGA();
+
+	initInterrupt();
+	while(1);
 	return 0;
 }
 

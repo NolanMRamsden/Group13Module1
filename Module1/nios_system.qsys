@@ -12,6 +12,14 @@
    element $${FILENAME}
    {
    }
+   element Altera_UP_SD_Card_Avalon_Interface_0
+   {
+      datum _sortIndex
+      {
+         value = "18";
+         type = "int";
+      }
+   }
    element LEDs
    {
       datum _sortIndex
@@ -65,6 +73,14 @@
       datum baseAddress
       {
          value = "16488";
+         type = "String";
+      }
+   }
+   element Altera_UP_SD_Card_Avalon_Interface_0.avalon_sdcard_slave
+   {
+      datum baseAddress
+      {
+         value = "17408";
          type = "String";
       }
    }
@@ -137,6 +153,27 @@
          type = "String";
       }
    }
+   element Pushbutton.s1
+   {
+      datum _lockedAddress
+      {
+         value = "1";
+         type = "boolean";
+      }
+      datum baseAddress
+      {
+         value = "16384";
+         type = "String";
+      }
+   }
+   element timer_0.s1
+   {
+      datum baseAddress
+      {
+         value = "16448";
+         type = "String";
+      }
+   }
    element switches.s1
    {
       datum _lockedAddress
@@ -147,14 +184,6 @@
       datum baseAddress
       {
          value = "16432";
-         type = "String";
-      }
-   }
-   element timer_0.s1
-   {
-      datum baseAddress
-      {
-         value = "16448";
          type = "String";
       }
    }
@@ -176,19 +205,6 @@
       datum baseAddress
       {
          value = "16777216";
-         type = "String";
-      }
-   }
-   element Pushbutton.s1
-   {
-      datum _lockedAddress
-      {
-         value = "1";
-         type = "boolean";
-      }
-      datum baseAddress
-      {
-         value = "16384";
          type = "String";
       }
    }
@@ -287,7 +303,7 @@
  <parameter name="projectName" value="Module1.qpf" />
  <parameter name="sopcBorderPoints" value="false" />
  <parameter name="systemHash" value="1" />
- <parameter name="timeStamp" value="1411617251134" />
+ <parameter name="timeStamp" value="1411689820658" />
  <parameter name="useTestBenchNamingPattern" value="false" />
  <instanceScript></instanceScript>
  <interface name="clk" internal="clk_0.clk_in" type="clock" dir="end" />
@@ -317,6 +333,11 @@
  <interface
    name="pushbutton"
    internal="Pushbutton.external_connection"
+   type="conduit"
+   dir="end" />
+ <interface
+   name="sd_data"
+   internal="Altera_UP_SD_Card_Avalon_Interface_0.conduit_end"
    type="conduit"
    dir="end" />
  <module kind="clock_source" version="13.0" enabled="1" name="clk_0">
@@ -431,7 +452,7 @@
   <parameter name="tightlyCoupledInstructionMaster2AddrWidth" value="1" />
   <parameter name="tightlyCoupledInstructionMaster3AddrWidth" value="1" />
   <parameter name="instSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x1000' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x1800' end='0x2000' /><slave name='sdram.s1' start='0x1000000' end='0x1800000' /></address-map>]]></parameter>
-  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x1000' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x1800' end='0x2000' /><slave name='video_character_buffer_with_dma_0.avalon_char_buffer_slave' start='0x2000' end='0x4000' /><slave name='Pushbutton.s1' start='0x4000' end='0x4010' /><slave name='video_pixel_buffer_dma_0.avalon_control_slave' start='0x4010' end='0x4020' /><slave name='LEDs.s1' start='0x4020' end='0x4030' /><slave name='switches.s1' start='0x4030' end='0x4040' /><slave name='timer_0.s1' start='0x4040' end='0x4060' /><slave name='video_character_buffer_with_dma_0.avalon_char_control_slave' start='0x4060' end='0x4068' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x4068' end='0x4070' /><slave name='Pixel_Buffer.avalon_sram_slave' start='0x80000' end='0x100000' /><slave name='sdram.s1' start='0x1000000' end='0x1800000' /></address-map>]]></parameter>
+  <parameter name="dataSlaveMapParam"><![CDATA[<address-map><slave name='onchip_memory2_0.s1' start='0x0' end='0x1000' /><slave name='nios2_qsys_0.jtag_debug_module' start='0x1800' end='0x2000' /><slave name='video_character_buffer_with_dma_0.avalon_char_buffer_slave' start='0x2000' end='0x4000' /><slave name='Pushbutton.s1' start='0x4000' end='0x4010' /><slave name='video_pixel_buffer_dma_0.avalon_control_slave' start='0x4010' end='0x4020' /><slave name='LEDs.s1' start='0x4020' end='0x4030' /><slave name='switches.s1' start='0x4030' end='0x4040' /><slave name='timer_0.s1' start='0x4040' end='0x4060' /><slave name='video_character_buffer_with_dma_0.avalon_char_control_slave' start='0x4060' end='0x4068' /><slave name='jtag_uart_0.avalon_jtag_slave' start='0x4068' end='0x4070' /><slave name='Altera_UP_SD_Card_Avalon_Interface_0.avalon_sdcard_slave' start='0x4400' end='0x4800' /><slave name='Pixel_Buffer.avalon_sram_slave' start='0x80000' end='0x100000' /><slave name='sdram.s1' start='0x1000000' end='0x1800000' /></address-map>]]></parameter>
   <parameter name="clockFrequency" value="50000000" />
   <parameter name="deviceFamilyName" value="Cyclone II" />
   <parameter name="internalIrqMaskSystemInfo" value="40" />
@@ -689,6 +710,14 @@
   <parameter name="snapshot" value="true" />
   <parameter name="timeoutPulseOutput" value="false" />
   <parameter name="systemFrequency" value="50000000" />
+ </module>
+ <module
+   kind="Altera_UP_SD_Card_Avalon_Interface"
+   version="13.0"
+   enabled="1"
+   name="Altera_UP_SD_Card_Avalon_Interface_0">
+  <parameter name="AUTO_CLOCK_SINK_CLOCK_RATE" value="50000000" />
+  <parameter name="AUTO_DEVICE_FAMILY" value="Cyclone II" />
  </module>
  <connection
    kind="avalon"
@@ -1106,6 +1135,30 @@
    version="13.0"
    start="nios2_qsys_0.jtag_debug_module_reset"
    end="timer_0.reset" />
+ <connection
+   kind="avalon"
+   version="13.0"
+   start="nios2_qsys_0.data_master"
+   end="Altera_UP_SD_Card_Avalon_Interface_0.avalon_sdcard_slave">
+  <parameter name="arbitrationPriority" value="1" />
+  <parameter name="baseAddress" value="0x4400" />
+  <parameter name="defaultConnection" value="false" />
+ </connection>
+ <connection
+   kind="clock"
+   version="13.0"
+   start="clk_0.clk"
+   end="Altera_UP_SD_Card_Avalon_Interface_0.clock_sink" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="clk_0.clk_reset"
+   end="Altera_UP_SD_Card_Avalon_Interface_0.clock_sink_reset" />
+ <connection
+   kind="reset"
+   version="13.0"
+   start="nios2_qsys_0.jtag_debug_module_reset"
+   end="Altera_UP_SD_Card_Avalon_Interface_0.clock_sink_reset" />
  <interconnectRequirement for="$system" name="qsys_mm.clockCrossingAdapter" value="HANDSHAKE" />
  <interconnectRequirement for="$system" name="qsys_mm.maxAdditionalLatency" value="1" />
 </system>

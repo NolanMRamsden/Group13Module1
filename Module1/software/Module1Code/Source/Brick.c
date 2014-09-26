@@ -4,8 +4,6 @@
  *  Created on: Sep 24, 2014
  *      Author: Nolan
  */
-
-
 #include "../Headers/Brick.h"
 
 Brick *initBrick(int x, int y)

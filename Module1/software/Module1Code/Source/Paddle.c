@@ -4,6 +4,7 @@
  *  Created on: Sep 23, 2014
  *      Author: Nolan
  */
+#include "../Headers/Definitions.h"
 #include "../Headers/Paddle.h"
 
 Paddle *initPaddle(float x)
