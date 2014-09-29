@@ -1,0 +1,29 @@
+/*
+ * Interrupt.c
+ *
+ *  Created on: Sep 24, 2014
+ *      Author: Nolan
+ */
+
+#include "../Headers/Interrupt.h"
+static alt_alarm alarm;
+
+alt_u32 interruptFunction(void* context)
+{
+	updatePosition(level->balls[0]);
+	drawBall(level->balls[0]->x/100,level->balls[0]->y/100,0xFFFF);
+	int move=getUserInput();
+	moveHorizontal(level->paddle);
+	drawPaddle(level->paddle->x/100,level->paddle->y/100,0xFAFA);
+	return alt_ticks_per_second()/screenRefreshRate;
+}
+
+void initInterrupt()
+{
+	alt_alarm_start (&alarm, alt_ticks_per_second()/screenRefreshRate, interruptFunction, NULL );
+}
+
+void stopInterrupt()
+{
+	alt_alarm_stop (&alarm);
+}

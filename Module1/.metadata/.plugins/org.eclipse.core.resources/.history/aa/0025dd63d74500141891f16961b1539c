@@ -1,0 +1,27 @@
+
+#include "Headers/headers.h"
+
+int main()
+{
+	initVGA();
+	initGame();
+	initLevel(3);
+	initInterrupt();
+	game = malloc(sizeof(Game));
+	level = malloc(sizeof(Level));
+	while(1)
+	{
+		if(game->state = Menu)
+		{
+
+		}else if(game->state = Paused)
+		{
+			stopInterrupt();
+		}else if(game->state = Playing)
+		{
+
+		}
+	}
+	return 0;
+}
+

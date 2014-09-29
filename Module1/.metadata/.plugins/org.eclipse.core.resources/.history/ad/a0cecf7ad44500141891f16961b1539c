@@ -1,0 +1,16 @@
+
+#include "Headers/headers.h"
+
+int main()
+{
+	initVGA();
+	drawText("hello",2,2,0);
+	//initLevel(3);
+	//initInterrupt();
+	while(1)
+	{
+
+	}
+	return 0;
+}
+

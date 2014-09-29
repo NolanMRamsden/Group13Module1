@@ -149,6 +149,8 @@ C_SRCS += Source/Brick.c
 C_SRCS += Source/Input.c
 C_SRCS += Source/Interrupt.c
 C_SRCS += Source/Drawing.c
+C_SRCS += Source/Level.c
+C_SRCS += Source/Game.c
 CXX_SRCS :=
 ASM_SRCS :=
 

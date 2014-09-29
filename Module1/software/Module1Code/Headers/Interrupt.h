@@ -9,7 +9,7 @@
 #include "sys/alt_alarm.h"
 #include "Definitions.h"
 #include "Drawing.h"
-#include "Ball.h"
+#include "headers.h"
 
 #ifndef INTERRUPT_H_
 #define INTERRUPT_H_

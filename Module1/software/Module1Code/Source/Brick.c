@@ -6,15 +6,18 @@
  */
 #include "../Headers/Brick.h"
 
-Brick *initBrick(int x, int y)
+const int brickHeight=10;
+const int brickWidth=50;
+const int startBrickHealth=1;
+
+void initBrick(Brick *brick, int x, int y)
 {
-	Brick *brick;
 	brick->x = x;
 	brick->y = y;
-	brick->width = brickWidth;
+	brick->width  = brickWidth;
 	brick->height = brickHeight;
 	brick->health = startBrickHealth;
-	return brick;
+	brick->prevHealth  = startBrickHealth;
 }
 
 void hit(Brick *brick)

@@ -1,0 +1,17 @@
+/*
+ * Level.c
+ *
+ *  Created on: Sep 25, 2014
+ *      Author: Karen
+ */
+#include "../Headers/Level.h"
+
+void initLevel(int lev)
+{
+	delete level->ball;
+	delete level->paddle;
+	level->ball = malloc(sizeof(Ball));
+	level->paddle = malloc(sizeof(Paddle));
+
+	startBall(level->ball,20,20,400,200);
+}

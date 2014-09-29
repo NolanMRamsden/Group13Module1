@@ -9,19 +9,19 @@
 #ifndef PADDLE_H_
 #define PADDLE_H_
 
-const int paddleMoveScale = 1;
-const int paddleHeight=10;
-const int paddleStartWidth=50;
-
 typedef struct Paddle
 {
 	float x;
 	float y;
+	int prevX;
+	int prevY;
 	int width;
+	int height;
+	int colour;
 
 } Paddle;
 
-extern Paddle *initPaddle(float x);
+extern void initPaddle(Paddle *paddle, int x);
 extern void moveHorizontal(Paddle *paddle, int x);
 
 

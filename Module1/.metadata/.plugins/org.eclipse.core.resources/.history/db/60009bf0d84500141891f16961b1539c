@@ -1,0 +1,24 @@
+/*
+ * Game.c
+ *
+ *  Created on: Sep 26, 2014
+ *      Author: Karen
+ */
+
+#include "../Headers/Game.h"
+
+void initGame()
+{
+	game->state = Menu;
+	game->prevState = Menu;
+}
+void startPlaying(int level)
+{
+
+
+}
+void changeState(int state)
+{
+	game->prevState=game->state;
+	game->state=state;
+}

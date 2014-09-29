@@ -15,9 +15,12 @@ typedef struct Ball
 {
 	int x;
 	int y;
+	int prevX;
+	int prevY;
 	int xVelo;
 	int yVelo;
 	int alive;
+	int colour;
 } Ball;
 
 extern void startBall(Ball *ball, int x, int y, int xVelo, int yVelo);

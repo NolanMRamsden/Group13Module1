@@ -7,21 +7,25 @@
 #include "../Headers/Definitions.h"
 #include "../Headers/Paddle.h"
 
-Paddle *initPaddle(float x)
+
+void initPaddle(Paddle *paddle, int x)
 {
-	Paddle *paddle;
-	paddle->x = x;
-	paddle->y = paddleHeight;
+	paddle->x = x*100;
+	paddle->y = paddleHeight*100;
+	paddle->prevX = x*100;
+	paddle->prevY = paddleHeight*100;
 	paddle->width = paddleStartWidth;
-	return paddle;
+	paddle->height = paddleThickness;
+	paddle->colour = 0xFAFA;
 }
 
 void moveHorizontal(Paddle *paddle, int x)
 {
 	paddle->x += (x*paddleMoveScale);
-	if ( x < leftScreenBound)
-		x = leftScreenBound;
-	if ( x > rightScreenBound )
-		x = rightScreenBound;
+
+	if ( paddle->x < leftScreenBound*100)
+		paddle->x = leftScreenBound*100;
+	else if ( paddle->x + paddle->width*100 > rightScreenBound*100 )
+		paddle->x = rightScreenBound*100 - paddle->width*100;
 }
 

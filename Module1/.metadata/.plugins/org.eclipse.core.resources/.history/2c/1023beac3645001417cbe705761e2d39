@@ -1,0 +1,29 @@
+/*
+ * Paddle.c
+ *
+ *  Created on: Sep 23, 2014
+ *      Author: Nolan
+ */
+#include "../Headers/Definitions.h"
+#include "../Headers/Paddle.h"
+
+const int paddleMoveScale = 40;
+const int paddleHeight=190;
+const int paddleStartWidth=60;
+
+void initPaddle(Paddle *paddle, int x)
+{
+	paddle->x = x*100;
+	paddle->y = paddleHeight*100;
+	paddle->width = paddleStartWidth;
+}
+
+void moveHorizontal(Paddle *paddle, int x)
+{
+	paddle->x += (x*paddleMoveScale);
+	if ( paddle->x < leftScreenBound*100)
+		paddle->x = leftScreenBound*100;
+	if ( paddle->x + paddle->width > rightScreenBound*100 )
+		paddle->x = rightScreenBound*100;
+}
+

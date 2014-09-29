@@ -1,0 +1,25 @@
+/*
+ * Game.h
+ *
+ *  Created on: Sep 26, 2014
+ *      Author: Karen
+ */
+#include "Definitions.h"
+
+#ifndef GAME_H_
+#define GAME_H_
+
+typedef struct Game
+{
+	//Player *player;
+	int state;
+	int prevState
+} Game;
+
+static Game *game;
+
+extern void initGame();
+extern void startPlaying(int level);
+extern void changeState(int state);
+
+#endif /* GAME_H_ */

@@ -7,7 +7,7 @@
 #include "../Headers/Definitions.h"
 #include "io.h"
 
-const int scalars[4] = {-5,-2,2,5};
+const int scalars[4] = {10,5,-5,-10};
 //returns a number from -10 to 10 for the scalar value of horizontal movement
 int getUserInput()
 {

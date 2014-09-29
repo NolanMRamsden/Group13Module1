@@ -1,0 +1,46 @@
+
+#include "Headers/headers.h"
+
+static int currentState;
+static int prevState;
+
+void changeState(int state)
+{
+	prevState = currentState;
+	currentState=state;
+}
+
+int main()
+{
+	initVGA();
+	initGame();
+	initLevel(3);
+	initInterrupt();
+	game = malloc(sizeof(Game));
+	level = malloc(sizeof(Level));
+	while(1)
+	{
+		if(getUserInput()== -10)
+			changeState(Paused);
+		else
+			changeState(Playing);
+
+		if(prevState != currentState)
+		{
+			if(currentState == Menu)
+			{
+
+			}else if(currentState == Paused)
+			{
+				stopInterrupt();
+			}else if(currentState == Playing)
+			{
+				initInterrupt();
+			}
+			prevState = currentState;
+		}
+	}
+	return 0;
+}
+
+

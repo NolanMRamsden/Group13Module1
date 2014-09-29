@@ -1,0 +1,12 @@
+
+#include "Headers/Definitions.h"
+
+int main()
+{
+	initVGA();
+	initLevel(getSwitchIndex());
+	initInterrupt();
+	while(1);
+	return 0;
+}
+

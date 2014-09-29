@@ -1,0 +1,28 @@
+
+#include "Headers/headers.h"
+
+int main()
+{
+	initVGA();
+	initGame();
+	initLevel(3);
+	initInterrupt();
+	while(1)
+	{
+		int input = getSwitchIndex();
+		if(input==1)
+			game->state=Paused;
+		if(game->state = Menu)
+		{
+
+		}else if(game->state = Paused)
+		{
+			stopInterrupt();
+		}else if(game->state = Playing)
+		{
+
+		}
+	}
+	return 0;
+}
+
