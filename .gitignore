@@ -1,0 +1,7 @@
+*
+*/
+
+!.gitignore
+!.\Module1\Software\Headers\*
+!.\Module1\Software\Source\*
+!.\Module1\Software\entryPoint.c

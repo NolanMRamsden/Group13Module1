@@ -7,8 +7,7 @@ obj/default/Source/Level.o: Source/Level.c Source/../Headers/Level.h \
   Source/../Headers/../Headers/Paddle.h \
   Source/../Headers/../Headers/../Headers/Definitions.h \
   Source/../Headers/../Headers/Level.h \
-  Source/../Headers/../Headers/../Headers/headers.h \
-  Source/../Headers/../Headers/Game.h
+  Source/../Headers/../Headers/../Headers/headers.h
 
 Source/../Headers/Level.h:
 
@@ -29,5 +28,3 @@ Source/../Headers/../Headers/../Headers/Definitions.h:
 Source/../Headers/../Headers/Level.h:
 
 Source/../Headers/../Headers/../Headers/headers.h:
-
-Source/../Headers/../Headers/Game.h:
