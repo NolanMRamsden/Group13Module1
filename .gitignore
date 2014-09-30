@@ -11,5 +11,6 @@
 .objdump
 .o
 .d
+.bsp
 
 Module1/incremental_db/compiled_partitions/*
