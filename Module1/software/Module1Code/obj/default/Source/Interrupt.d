@@ -10,6 +10,7 @@ obj/default/Source/Interrupt.o: Source/Interrupt.c \
   Source/../Headers/Brick.h Source/../Headers/Paddle.h \
   Source/../Headers/../Headers/Definitions.h Source/../Headers/Level.h \
   Source/../Headers/../Headers/headers.h Source/../Headers/Game.h \
+  Source/../Headers/SDCard.h Source/../Headers/Score.h \
   ../Module1Code_bsp//drivers/inc/altera_up_avalon_video_character_buffer_with_dma.h \
   ../Module1Code_bsp//HAL/inc/alt_types.h \
   ../Module1Code_bsp//HAL/inc/sys/alt_dev.h ../Module1Code_bsp/system.h \
@@ -53,6 +54,10 @@ Source/../Headers/Level.h:
 Source/../Headers/../Headers/headers.h:
 
 Source/../Headers/Game.h:
+
+Source/../Headers/SDCard.h:
+
+Source/../Headers/Score.h:
 
 ../Module1Code_bsp//drivers/inc/altera_up_avalon_video_character_buffer_with_dma.h:
 

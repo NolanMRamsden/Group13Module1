@@ -12,6 +12,29 @@ void changeState(int state)
 
 int main()
 {
+	// Initialize SD Card
+	 sdcard_Init();
+	 int score = 0;
+
+	while(!sdcard_isPresent())
+	{
+		printf("No SD Card inserted \n");
+	}
+	while(!sdcard_isFAT16())
+	{
+		printf("SD Card must be FAT16 formatted! \n");
+	}
+
+	 char read_data [100] = {0}; // The score will be read into this buffer
+	 printf("read data: %s \n", read_data);
+	 score = get_score_from_sd_card(read_data);
+
+	 score +=2;
+
+	// printf("going to write: %d \n", score);
+
+	write_score_to_sd_card(score);
+
 	initVGA();
 	level = malloc(sizeof(Level));
 	initLevel(3);

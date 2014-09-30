@@ -151,6 +151,8 @@ C_SRCS += Source/Interrupt.c
 C_SRCS += Source/Drawing.c
 C_SRCS += Source/Level.c
 C_SRCS += Source/Game.c
+C_SRCS += Source/SDCard.c
+C_SRCS += Source/Score.c
 CXX_SRCS :=
 ASM_SRCS :=
 

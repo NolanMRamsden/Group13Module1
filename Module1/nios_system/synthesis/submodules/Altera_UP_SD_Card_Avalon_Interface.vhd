@@ -284,11 +284,11 @@ begin
 				next_state <= s_WAIT_RELEASE;
 				
 			when s_WAIT_RELEASE =>
-				-- if ((read_buffer_request = '1') or (write_buffer_request = '1')) then
-					-- next_state <= s_WAIT_RELEASE;
-				-- else
+				if ((read_buffer_request = '1') or (write_buffer_request = '1')) then
+					next_state <= s_WAIT_RELEASE;
+				else
 					next_state <= s_WAIT_REQUEST;
-				-- end if;
+				end if;
 							
 			when others =>
 				-- Make sure to start in the reset state if the circuit powers up in an odd state.
