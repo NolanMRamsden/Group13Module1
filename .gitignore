@@ -10,3 +10,4 @@
 *.elf
 *.objdump
 *.o
+*.log
