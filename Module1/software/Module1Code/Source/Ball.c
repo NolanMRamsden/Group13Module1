@@ -52,7 +52,7 @@ void updatePosition(Ball *ball)
 	{
 		ball->y = bottomScreenBound*100-ballDiameter*100;
 		bounceRoof(ball);
-	}
+	}//end screen bounds
 
 	//hit paddle
 	if (ball->y >= level->paddle->y-ballDiameter*100-100
@@ -64,8 +64,10 @@ void updatePosition(Ball *ball)
 		{
 			bounceRoof(ball);
 		}
-	}
+	}//end paddle logic
 
+	if(0)
+		return;
 	//hit brick
 	int i=0;
 	int hasBounced=0;
@@ -91,7 +93,7 @@ void updatePosition(Ball *ball)
 				}
 			}
 		}
-	}
+	}//end brick logic
 
 
 }
