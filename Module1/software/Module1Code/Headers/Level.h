@@ -14,12 +14,13 @@ typedef struct Level
 	Ball *balls;
 	Ball *balls2;
 	Ball *balls3;
-	Brick *bricks[10];
+	BrickRow *brickRow;
 	Paddle *paddle;
 } Level;
 
 static Level *level;
 
 extern void initLevel(int lev);
+extern void drawStart(Level *level);
 
 #endif /* LEVEL_H_ */

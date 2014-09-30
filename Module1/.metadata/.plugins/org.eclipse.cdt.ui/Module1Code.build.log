@@ -1,27 +1,7 @@
 
-**** Build of configuration Nios II for project Module1Code ****
+**** Clean-only build of configuration Nios II for project Module1Code ****
 
-make all 
-Info: Building ../Module1Code_bsp/
-make --no-print-directory -C ../Module1Code_bsp/
-[BSP build complete]
-Info: Compiling entryPoint.c to obj/default/entryPoint.o
-nios2-elf-gcc -xc -MP -MMD -c -I../Module1Code_bsp//HAL/inc -I../Module1Code_bsp/ -I../Module1Code_bsp//drivers/inc  -DSYSTEM_BUS_WIDTH=32 -pipe -D__hal__ -DALT_NO_INSTRUCTION_EMULATION -DALT_SINGLE_THREADED    -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o obj/default/entryPoint.o entryPoint.c
-Info: Linking Module1Code.elf
-nios2-elf-g++  -T'../Module1Code_bsp//linker.x' -msys-crt0='../Module1Code_bsp//obj/HAL/src/crt0.o' -msys-lib=hal_bsp -L../Module1Code_bsp/   -Wl,-Map=Module1Code.map   -O0 -g -Wall   -EL -mno-hw-div -mhw-mul -mno-hw-mulx  -o Module1Code.elf obj/default/Source/Ball.o obj/default/Source/Brick.o obj/default/Source/Drawing.o obj/default/Source/Game.o obj/default/Source/Input.o obj/default/Source/Interrupt.o obj/default/Source/Level.o obj/default/Source/Paddle.o obj/default/entryPoint.o -lm 
-entryPoint.c: In function 'main':
-entryPoint.c:15: warning: implicit declaration of function 'initVGA'
-nios2-elf-insert Module1Code.elf --thread_model hal --cpu_name nios2_qsys_0 --qsys true --simulation_enabled false --stderr_dev jtag_uart_0 --stdin_dev jtag_uart_0 --stdout_dev jtag_uart_0 --sopc_system_name nios_system --quartus_project_dir "C:/Users/Karen/Documents/GitHub/Group13Module1/Module1" --sopcinfo C:/Users/Karen/Documents/GitHub/Group13Module1/Module1/nios_system.sopcinfo
-entryPoint.c:16: warning: implicit declaration of function 'malloc'
-entryPoint.c:16: warning: incompatible implicit declaration of built-in function 'malloc'
-entryPoint.c:18: warning: implicit declaration of function 'initInterrupt'
-entryPoint.c:28: warning: implicit declaration of function 'getSwitchIndex'
-entryPoint.c:40: warning: implicit declaration of function 'stopInterrupt'
-entryPoint.c:41: warning: implicit declaration of function 'drawText'
-Info: (Module1Code.elf) 34 KBytes program size (code + initialized data).
-Info:                   8150 KBytes free for stack + heap.
-Info: Creating Module1Code.objdump
-nios2-elf-objdump --disassemble --syms --all-header --source Module1Code.elf >Module1Code.objdump
-[Module1Code build complete]
+make clean 
+[Module1Code clean complete]
 
 **** Build Finished ****

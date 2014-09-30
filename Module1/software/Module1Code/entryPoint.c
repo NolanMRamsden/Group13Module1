@@ -36,8 +36,13 @@ int main()
 	write_score_to_sd_card(score);
 
 	initVGA();
-	level = malloc(sizeof(Level));
+	//level = malloc(sizeof(Level));
+
 	initLevel(3);
+
+
+	drawStart(level);
+
 	initInterrupt();
 	currentState=prevState=Playing;
 
@@ -61,7 +66,7 @@ int main()
 			if(currentState == Menu)
 			{
 				stopInterrupt();
-				drawText("Menu",40,30,0);
+				drawText("Menu",40,30,1);
 			}else if(currentState == Paused)
 			{
 				stopInterrupt();

@@ -24,6 +24,9 @@ void nullBall(Ball *ball)
 
 void updatePosition(Ball *ball)
 {
+	if(ball->alive == 0)
+		return;
+
 	ball->x += ball->xVelo;
 	ball->y += ball->yVelo;
 
@@ -41,27 +44,56 @@ void updatePosition(Ball *ball)
 		ball->x = rightScreenBound*100-ballDiameter*100;
 		bounceWall(ball);
 	}
-	if (y <= topScreenBound)
+	if (y <= topScreenBound+1)
 	{
-		ball->y = topScreenBound*100;
+		ball->y = topScreenBound*100+100;
 		bounceRoof(ball);
 	}else if (y >= bottomScreenBound-ballDiameter)
 	{
 		ball->y = bottomScreenBound*100-ballDiameter*100;
 		bounceRoof(ball);
-	}
+	}//end screen bounds
 
 	//hit paddle
 	if (ball->y >= level->paddle->y-ballDiameter*100-100
 	&&  ball->y <= level->paddle->y-ballDiameter*100 + level->paddle->height*100+100)
 	{
-		if(ball->x >= level->paddle->x
-		&& ball->x <= level->paddle->x + level->paddle->width*100
+		if(ball->x >= level->paddle->x - ballDiameter*100-100
+		&& ball->x <= level->paddle->x + level->paddle->width*100 + 100
 		)//&& ball->yVelo > 0)
 		{
 			bounceRoof(ball);
 		}
-	}
+	}//end paddle logic
+
+	if(0)
+		return;
+	//hit brick
+	int i=0;
+	int hasBounced=0;
+	for(i=0;i<bricksPerRow;i++)
+	{
+		Brick brick = *level->brickRow->bricks[i];
+		if(brick.health >0)
+		{
+			if (ball->y/100 >= brick.y + ballDiameter
+			&&  ball->y/100<= brick.y + brickHeight)
+			{
+				if(ball->x/100+ballDiameter/2 >= brick.x -1
+				&& ball->x/100-ballDiameter/2 <= brick.x + brickWidth +1)//&& ball->yVelo > 0)
+				{
+					/*if(ball->yVelo < 0)
+						ball->y=(brick.y-ballDiameter)*100;
+					else*/ if(ball->yVelo < 0)
+						ball->y=(brick.y + brickHeight)*100;
+					if(hasBounced==0)
+						bounceRoof(ball);
+					hasBounced=1;
+					hit(level->brickRow->bricks[i]);
+				}
+			}
+		}
+	}//end brick logic
 
 
 }

@@ -1,5 +1,5 @@
 obj/drivers/src/altera_up_sd_card_avalon_interface.o:  \
- drivers/src/Altera_UP_SD_Card_Avalon_Interface.c HAL/inc/priv/alt_file.h \
+ drivers/src/altera_up_sd_card_avalon_interface.c HAL/inc/priv/alt_file.h \
   HAL/inc/sys/alt_dev.h system.h linker.h HAL/inc/sys/alt_llist.h \
   HAL/inc/alt_types.h HAL/inc/priv/alt_dev_llist.h \
   HAL/inc/sys/alt_llist.h HAL/inc/alt_types.h HAL/inc/os/alt_sem.h \
