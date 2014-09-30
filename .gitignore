@@ -1,10 +1,3 @@
-*.*
-
-!.gitignore
-!.\Module1\Software\Headers\*
-!.\Module1\Software\Source\*
-!.\Module1\Software\entryPoint.c
-*.log
 *.log
 *.prefs
 *.elf
@@ -17,4 +10,6 @@
 .elf
 .objdump
 .o
-.log
+.d
+
+Module1/incremental_db/compiled_partitions/*
