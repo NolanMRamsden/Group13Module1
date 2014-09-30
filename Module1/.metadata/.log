@@ -3975,3 +3975,12 @@ org.eclipse.osgi.framework.internal.core.AbstractBundle$BundleStatusException
 
 !ENTRY com.altera.sbtgui.launch 1 0 2014-09-30 15:42:09.674
 !MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/Module1Code.elf]
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-09-30 15:48:39.719
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --stop --accept-bad-sysid --sidp=Not Found]
+
+!ENTRY com.altera.sbtgui.launch 4 0 2014-09-30 15:48:42.720
+!MESSAGE Failed Executing: [nios2-download, '--cable=USB-Blaster on localhost [USB-0]', --device=1, --instance=0, --stop, --accept-bad-sysid, --sidp=Not Found] return code: 8
+
+!ENTRY com.altera.sbtgui.launch 1 0 2014-09-30 15:48:48.072
+!MESSAGE Executing: [C:/altera/13.0sp1/quartus\bin\cygwin\bin\bash.exe, -c, nios2-download '--cable=USB-Blaster on localhost [USB-0]' --device=1 --instance=0 --go --accept-bad-sysid /cygdrive/c/Users/Karen/Documents/GitHub/Group13Module1/Module1/software/Module1Code/Module1Code.elf]

@@ -58,8 +58,8 @@ void updatePosition(Ball *ball)
 	if (ball->y >= level->paddle->y-ballDiameter*100-100
 	&&  ball->y <= level->paddle->y-ballDiameter*100 + level->paddle->height*100+100)
 	{
-		if(ball->x >= level->paddle->x
-		&& ball->x <= level->paddle->x + level->paddle->width*100
+		if(ball->x >= level->paddle->x - ballDiameter*100-100
+		&& ball->x <= level->paddle->x + level->paddle->width*100 + 100
 		)//&& ball->yVelo > 0)
 		{
 			bounceRoof(ball);
