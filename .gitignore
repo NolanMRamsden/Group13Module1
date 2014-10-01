@@ -12,5 +12,6 @@
 .o
 .d
 .bsp
+.map
 
 Module1/incremental_db/compiled_partitions/*

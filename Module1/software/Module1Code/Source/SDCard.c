@@ -118,18 +118,8 @@ void sdcard_ReadFile(char read_data[], short int file_handle)
 {
 	short int byte = 0;
 	int size = 0;
-/*
-	for(byte = 0; byte == -1; byte = sdcard_ReadByte(file_handle))
-	{
-		printf("Inside the for loop \n");
-		printf("Byte %d: %d \n", size, byte);
-		read_data[size] = byte;
-		size++;
-	}
-*/
 	while(byte != -1)
 	{
-
 		byte = sdcard_ReadByte(file_handle);
 		if ( byte != -1) read_data[size] = byte;
 
@@ -137,8 +127,6 @@ void sdcard_ReadFile(char read_data[], short int file_handle)
 	}
 
 	read_data[size - 1] = '/';
-
-	printf("read_data after ReadFile: %s \n", read_data);
 }
 
 /*
@@ -172,12 +160,9 @@ void sdcard_WriteFile(char write_data [], short int file_handle)
 	while(write_data[byte_index] != 0)
 	{
 		result = alt_up_sd_card_write(file_handle, write_data[byte_index]);
-		printf("inside while loop: %d \n", result);
 		byte_index++;
 	}
 }
-
-
 
 /* Return: File attributes. -1 if invalid file.
  */
@@ -186,7 +171,6 @@ short int sdcard_getFattributes(short int file_handle)
 	short int att = alt_up_sd_card_get_attributes(file_handle);
 	return att;
 }
-
 
 /*
  * Closes the file

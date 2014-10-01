@@ -13,8 +13,8 @@ void changeState(int state)
 int main()
 {
 	// Initialize SD Card
-	 sdcard_Init();
-	 int score = 0;
+	sdcard_Init();
+	int score = 0;
 
 	while(!sdcard_isPresent())
 	{
